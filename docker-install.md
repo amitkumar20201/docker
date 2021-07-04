@@ -17,6 +17,7 @@ https://docs.docker.com/engine/install/linux-postinstall/
 ***END***
 
 **Install Commands**
+
 sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update
 sudo apt-get install \
@@ -42,12 +43,14 @@ newgrp docker
 docker run hello-world
 
 **Enable the docker and vaildate**
+
 systemctl is-enabled docker
 sudo systemctl enable docker
 systemctl status docker
 sudo systemctl start docker
 
 **Play with Docker**
+
 Docker Lab (Free) - https://labs.play-with-docker.com/
 Kubernetes (Free) - https://learn.openshift.com/playgrounds/
 
