@@ -11,6 +11,9 @@ docker run --rm simplilearn-phpinfo:labs which curl php tree
 
 docker container run --detach --entrypoint /usr/bin/php --name simplilearn-phpinfo --publish 80:8080 --volume ${PWD}/src:/src --workdir /src simplilearn-phpinfo:labs -f index.php -S 0.0.0.0:8080
 
+docker container top simplilearn-phpinfo 
+docker container logs simplilearn-phpinfo
+
 **How to Connect to a Remote Docker Daemon**
 
 From <https://dockerlabs.collabnix.com/beginners/components/daemon/access-daemon-externally.html> 
