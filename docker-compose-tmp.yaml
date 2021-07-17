@@ -21,14 +21,16 @@ services:
     entrypoint: /usr/bin/php
     environment:
       OWNER: Sebastian
-    image: academiaonline/simplilearn-phpinfo:1.1-src
+    image: academiaonline/simplilearn-phpinfo:1.1
     networks:
       - simplilearn-phpinfo-network
     ports:
-      - 82:8080
+      - 81:8080
     user: nobody
-    working_dir: /src/    
-
+    volumes:
+      - /tmp/src/:/src/:ro
+    working_dir: /src/
+    
 version: '3.8'    
 
-# docker stack deploy --compose-file docker-compose-src.yaml SIMPLILEARN-PHPINFO-SRC 
+# docker stack deploy --compose-file docker-compose-tmp.yaml SIMPLILEARN-PHPINFO-TMP
